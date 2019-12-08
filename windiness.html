@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- CREATE NAVIGATION MENU -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html">SJ's WeatherPy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="max_temp.html">City Latitude vs. Max Temperature</a>
+          <a class="dropdown-item" href="humidity.html">City Latitude vs. Humidity</a>
+          <a class="dropdown-item" href="cloudiness.html">City Latitude vs. Cloudiness</a>
+          <a class="dropdown-item" href="windiness.html">City Latitude vs. Wind Speed</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="comparisons.html">Comparisons <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BUILD VISUALIZATION PAGE * Title, plot, paragraph describing significance -->
+
+<body>
+
+  <div class="container">
+      <p></p>
+      <p></p>  
+      <p></p>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="card text">
+      <div class="card text-white bg-info mb-3">
+        <div class="card-body">
+          <h2 class="text-center">Wind Speed at Different Latitudes</h2>
+          <p></p>
+          <div class = "row" class="center">
+              <div class="img-center">
+                <img src="resources/assets/images/Fig4.png" alt="Wind Speed" class="img-thumbnail">
+              </div>
+            </div>
+          </div>
+          <p class="card-text-left">The cities examined range from -60 to +80 degrees latitude and their windiness does
+              not appear to correlate with latitude. The plot above shows that, on January 5, 2017, at the time of the weather query, 
+              all five hundred and forty six cities examined had wind speeds lower than 36 mph and only eight cities had wind speeds over 25 mph.  </p>
+          <a href="index.html" class="btn btn-primary">Go Home</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <p></p>
+      <p></p>
+      <p></p>
+      <h2 class="text-center">Available Visualizations</h2>
+      <p></p>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig1.png" alt="max temp" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="max_temp.html" class="btn btn-primary" role="button">Max Temp</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig2.png" alt="humidity" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="humidity.html" class="btn btn-primary" role="button">Humidity</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig3.png" alt="cloudiness" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="cloudiness.html" class="btn btn-primary" role="button">Cloudiness</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig4.png" alt="windiness" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="windiness.html" class="btn btn-primary" role="button">Wind Speed</a></p>
+          </div>
+        </div>
+    </div>>
+
+</body>

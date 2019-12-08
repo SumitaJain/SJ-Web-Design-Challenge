@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- CREATE NAVIGATION MENU -->
+<!-- * Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+* Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+* Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
+* Is responsive (using media queries). The nav must have similar behavior as the screenshots ["Navigation Menu" section](#navigation-menu) (notice the background color change).
+ -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html">SJ's WeatherPy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="max_temp.html">City Latitude vs. Max Temperature</a>
+          <a class="dropdown-item" href="humidity.html">City Latitude vs. Humidity</a>
+          <a class="dropdown-item" href="cloudiness.html">City Latitude vs. Cloudiness</a>
+          <a class="dropdown-item" href="windiness.html">City Latitude vs. Wind Speed</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="comparisons.html">Comparisons <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+  </div>
+</nav>
+
+<!-- BUILD LANDING PAGE * An explanation of the project.  * Links to each visualizations page. -->
+
+<body>
+
+  <div class="container">
+      <p></p>
+      <p></p>  
+      <p></p>  
+
+    <div class="col-md-12">
+      <div class="card text-center">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-body">
+            <h2 class="text-center">Weather at Different Latitudes</h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class='row'>
+              <div class="col-md-7">
+                <p class = text-left>This website summarizes results of a project that leveraged a Python script to visualize weather of over 500 cities 
+                      across the world.  To get a snapshot of the maximum temperature, humidity, cloudiness, and wind speed of 
+                      cities of varying distance from the equator, we leveraged a Python library called 'citipy' (https://pypi.python.org/pypi/citipy), 
+                      as well as the OpenWeatherMap API (https://openweathermap.org/api).</p> 
+                <p class = text-left>As one would expect, the weather becomes significantly warmer as one approaches the equator (0 degrees latitude). 
+                      The data also shows that the southern hemisphere tends to be warmer in January, when the dataset was generated, 
+                      than the northern hemisphere. This may be due to the tilt of the earth. There appears to be no strong relationship 
+                      between latitude and cloudiness, humidity, or wind speed. </p>
+                <p class = text-left>Please explore the site to delve into the analysis further.</p>
+              </div>
+            
+              <div class="col-md-5">
+                <div class="thumbnail">
+                  <img src="resources/assets/images/Fig1.png" alt="max temp" class="img-thumbnail">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <p></p>
+      <p></p>
+      <p></p>
+      <h2 class="text-center">Available Visualizations</h2>
+      <p></p>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig1.png" alt="max temp" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="max_temp.html" class="btn btn-primary" role="button">Max Temp</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig2.png" alt="humidity" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="humidity.html" class="btn btn-primary" role="button">Humidity</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig3.png" alt="cloudiness" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="cloudiness.html" class="btn btn-primary" role="button">Cloudiness</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="resources/assets/images/Fig4.png" alt="wind speed" class="img-thumbnail">
+          </div>
+          <div class="caption">
+            <p><a href="windiness.html" class="btn btn-primary" role="button">Wind Speed</a></p>
+          </div>
+        </div>
+      </div>>
+    </div>
+
+</body>
